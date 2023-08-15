@@ -1,0 +1,26 @@
+{
+  "name": "JATE",
+  "version": "1.0.0",
+  "description": "This is a text editor",
+  "main": "server.js",
+  "scripts": {
+    "start:dev": "npm run start",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "build": "npm run client-build",
+    "install": "if-env NODE_ENV=production && npm run client-build || npm install",
+    "client": "cd client && npm start",
+    "client-build": "cd client && npm run build"
+  },
+  "keywords": [],
+  "author": "Jedidiah Chang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
