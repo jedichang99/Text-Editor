@@ -16,7 +16,7 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./src/index.html",
+        template: "./index.html",
         chunks: ["main"],
       }),
       new WebpackPwaManifest({
@@ -27,13 +27,13 @@ module.exports = () => {
         theme_color: "#000000",
         icons: [
           {
-            src: path.resolve("src/assets/icon.png"),
+            src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512],
           },
         ],
       }),
       new InjectManifest({
-        swSrc: "./src/service-worker.js", // Your service worker source file
+        swSrc: "./src-sw.js", // Your service worker source file
       }),
     ],
 
